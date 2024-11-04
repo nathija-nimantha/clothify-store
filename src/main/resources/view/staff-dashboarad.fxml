@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="684.0" prefWidth="1387.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.clothifyStore.controller.StaffDashboardController">
+   <children>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" height="56.0" layoutX="6.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1373.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.47867298578199047" startY="0.5592417061611374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6117647290229797" green="0.15294118225574493" blue="0.6901960968971252" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4156862795352936" green="0.10588235408067703" blue="0.6039215922355652" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="19.0" layoutY="15.0" text="Staff Dashboard - Items" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAdminName" layoutX="1280.0" layoutY="25.0" text="Admin Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#6a1b9a" height="604.0" layoutX="974.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="407.0" />
+      <Label layoutX="1215.0" layoutY="25.0" text="Welcome" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="itemTable" layoutX="8.0" layoutY="67.0" prefHeight="610.0" prefWidth="957.0" styleClass="dashboard-colour2" stylesheets="@../css/tableStyle.css">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="53.0" text="Id" />
+          <TableColumn fx:id="colName" prefWidth="157.0" text="Name" />
+            <TableColumn fx:id="colSize" prefWidth="46.0" text="Size" />
+            <TableColumn fx:id="colColor" prefWidth="104.0" text="Color" />
+            <TableColumn fx:id="colMaterial" prefWidth="105.0" text="Material" />
+            <TableColumn fx:id="colBrand" prefWidth="99.0" text="Brand" />
+            <TableColumn fx:id="colFit" prefWidth="86.0" text="Fit" />
+            <TableColumn fx:id="colStyle" prefWidth="89.0" text="Style" />
+            <TableColumn fx:id="colCareInstructions" prefWidth="214.0" text="Care Instructions" />
+            <TableColumn fx:id="colOccasion" prefWidth="182.0" text="Occasion" />
+        </columns>
+      </TableView>
+      <Label layoutX="993.0" layoutY="111.0" text="Name" textFill="WHITE" />
+      <TextField fx:id="txtName" layoutX="993.0" layoutY="136.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="1187.0" layoutY="111.0" text="Size" textFill="WHITE" />
+      <TextField fx:id="txtSize" layoutX="1187.0" layoutY="136.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="993.0" layoutY="174.0" text="Color" textFill="WHITE" />
+      <TextField fx:id="txtColor" layoutX="993.0" layoutY="199.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="1187.0" layoutY="174.0" text="Material" textFill="WHITE" />
+      <TextField fx:id="txtMaterial" layoutX="1187.0" layoutY="199.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="993.0" layoutY="247.0" text="Brand" textFill="WHITE" />
+      <TextField fx:id="txtBrand" layoutX="993.0" layoutY="272.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="1187.0" layoutY="247.0" text="Style" textFill="WHITE" />
+      <TextField fx:id="txtStyle" layoutX="1187.0" layoutY="272.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="993.0" layoutY="319.0" text="Occasion" textFill="WHITE" />
+      <TextField fx:id="txtOccasion" layoutX="993.0" layoutY="344.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="1187.0" layoutY="319.0" text="Fit" textFill="WHITE" />
+      <TextField fx:id="txtFit" layoutX="1187.0" layoutY="344.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="993.0" layoutY="392.0" text="Care Instructions" textFill="WHITE" />
+      <TextArea fx:id="txtCareInstructions" layoutX="994.0" layoutY="419.0" prefHeight="100.0" prefWidth="370.0" />
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="991.0" layoutY="544.0" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #3867d6;" text="Add" />
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1118.0" layoutY="544.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #fed330;" text="Update" />
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1245.0" layoutY="544.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #eb3b5a;" text="Delete" />
+      <Label layoutX="1049.0" layoutY="88.0" text="Item ID" textFill="WHITE" />
+      <TextField fx:id="txtId" layoutX="1107.0" layoutY="84.0" prefHeight="25.0" prefWidth="178.0" />
+      <JFXButton fx:id="btnCustomers" alignment="CENTER" layoutX="989.0" layoutY="617.0" onAction="#btnCustomersOnAction" text="Customers" textAlignment="CENTER" textFill="WHITE">
+         <stylesheets>
+            <URL value="@../css/buttonStyle.css" />
+         </stylesheets>
+      </JFXButton>
+      <JFXButton fx:id="btnOrders" alignment="CENTER" layoutX="1111.0" layoutY="617.0" onAction="#btnOrdersOnAction" text="Orders" textAlignment="CENTER" textFill="WHITE">
+         <stylesheets>
+            <URL value="@../css/buttonStyle.css" />
+         </stylesheets>
+      </JFXButton>
+   </children>
+</AnchorPane>

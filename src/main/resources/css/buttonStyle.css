@@ -1,0 +1,13 @@
+.jfx-button {
+    -fx-background-color: linear-gradient(#9c27b0, #6a1b9a);
+    -fx-text-fill: #000000;
+    -fx-font-size: 13px;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);
+    -fx-cursor: hand;
+}
+
+.jfx-button:hover {
+    -fx-background-color: linear-gradient(#008ba3, #00bcd4);
+}

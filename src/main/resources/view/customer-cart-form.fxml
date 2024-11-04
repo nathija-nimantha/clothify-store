@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="502.0" prefWidth="1027.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.clothifyStore.controller.CustomerCartFormController">
+   <children>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" height="56.0" layoutX="4.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1019.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.47867298578199047" startY="0.5592417061611374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6117647290229797" green="0.15294118225574493" blue="0.6901960968971252" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4156862795352936" green="0.10588235408067703" blue="0.6039215922355652" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="17.0" layoutY="12.0" text="Customer Dashboard - Cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="itemPage" arcHeight="20.0" arcWidth="20.0" height="432.0" layoutX="4.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="776.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.47867298578199047" startY="0.5592417061611374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6117647290229797" green="0.15294118225574493" blue="0.6901960968971252" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4156862795352936" green="0.10588235408067703" blue="0.6039215922355652" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="itemPage1" arcHeight="20.0" arcWidth="20.0" height="432.0" layoutX="786.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="237.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.47867298578199047" startY="0.5592417061611374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6117647290229797" green="0.15294118225574493" blue="0.6901960968971252" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4156862795352936" green="0.10588235408067703" blue="0.6039215922355652" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXButton fx:id="btnHome" alignment="CENTER" layoutX="933.0" layoutY="10.0" onAction="#btnHomeOnAction" text="Home" textAlignment="CENTER" textFill="WHITE">
+         <stylesheets>
+            <URL value="@../css/buttonStyle.css" />
+         </stylesheets>
+      </JFXButton>
+      <Label fx:id="lblCustomerName" layoutX="828.0" layoutY="21.0" text="Admin Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="763.0" layoutY="21.0" text="Welcome" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCart" layoutX="9.0" layoutY="71.0" prefHeight="351.0" prefWidth="762.0" styleClass="dashboard-colour2" stylesheets="@../css/tableStyle.css">
+         <columns>
+            <TableColumn fx:id="colItemId" prefWidth="47.0" text="ID" />
+            <TableColumn fx:id="colItemName" prefWidth="143.0" text="Name" />
+            <TableColumn fx:id="colItemSize" prefWidth="30.0" text="Size" />
+            <TableColumn fx:id="colItemColor" prefWidth="91.0" text="Color" />
+            <TableColumn fx:id="colItemMaterial" prefWidth="114.0" text="Material" />
+            <TableColumn fx:id="colItemBrand" prefWidth="137.0" text="Brand" />
+            <TableColumn fx:id="colItemCount" prefWidth="72.0" text="Item Count" />
+            <TableColumn fx:id="colItemPrice1" prefWidth="126.0" text="Price" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnUpdate" alignment="CENTER" layoutX="569.0" layoutY="436.0" onAction="#btnUpdateOnAction" text="Update" textAlignment="CENTER" textFill="WHITE">
+         <stylesheets>
+            <URL value="@../css/buttonStyle.css" />
+         </stylesheets>
+      </JFXButton>
+      <TextField fx:id="txtItemCount" layoutX="505.0" layoutY="443.0" prefHeight="25.0" prefWidth="44.0" />
+      <Label layoutX="432.0" layoutY="447.0" text="Item Count :" textFill="WHITE" />
+      <JFXButton fx:id="btnRemove" alignment="CENTER" layoutX="672.0" layoutY="436.0" onAction="#btnRemoveOnAction" text="Remove" textAlignment="CENTER" textFill="WHITE">
+         <stylesheets>
+            <URL value="@../css/buttonStyle.css" />
+         </stylesheets>
+      </JFXButton>
+      <TextField fx:id="txtTotalPrice" layoutX="879.0" layoutY="390.0" prefHeight="25.0" prefWidth="127.0" />
+      <Label layoutX="800.0" layoutY="394.0" text="Total Price : " textFill="WHITE" />
+      <JFXButton fx:id="btnCheckout" alignment="CENTER" layoutX="910.0" layoutY="437.0" onAction="#btnCheckoutOnAction" text="Checkout" textAlignment="CENTER" textFill="WHITE">
+         <stylesheets>
+            <URL value="@../css/buttonStyle.css" />
+         </stylesheets>
+      </JFXButton>
+   </children>
+</AnchorPane>

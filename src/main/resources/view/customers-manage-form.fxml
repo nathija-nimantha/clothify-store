@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="671.0" prefWidth="1319.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.clothifyStore.controller.CustomersManageFormController">
+   <children>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" height="56.0" layoutX="4.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1310.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.47867298578199047" startY="0.5592417061611374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6117647290229797" green="0.15294118225574493" blue="0.6901960968971252" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4156862795352936" green="0.10588235408067703" blue="0.6039215922355652" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="17.0" layoutY="14.0" text="Staff Dashboard - Customers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAdminName" layoutX="1207.0" layoutY="24.0" text="Admin Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#6a1b9a" height="597.0" layoutX="914.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0" />
+      <Label layoutX="1142.0" layoutY="24.0" text="Welcome" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="926.0" layoutY="418.0" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #3867d6;" text="Add" />
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1053.0" layoutY="418.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #fed330;" text="Update" />
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1180.0" layoutY="418.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #eb3b5a;" text="Delete" />
+      <JFXButton fx:id="btnItems" alignment="CENTER" layoutX="934.0" layoutY="602.0" onAction="#btnItemsOnAction" text="Items" textAlignment="CENTER" textFill="WHITE">
+         <stylesheets>
+            <URL value="@../css/buttonStyle.css" />
+         </stylesheets>
+      </JFXButton>
+      <JFXButton fx:id="btnOrders" alignment="CENTER" layoutX="1027.0" layoutY="602.0" onAction="#btnOrdersOnAction" text="Orders" textAlignment="CENTER" textFill="WHITE">
+         <stylesheets>
+            <URL value="@../css/buttonStyle.css" />
+         </stylesheets>
+      </JFXButton>
+      <TableView fx:id="tblCustomers" layoutX="5.0" layoutY="67.0" prefHeight="597.0" prefWidth="903.0" styleClass="dashboard-colour2" stylesheets="@../css/tableStyle.css">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="34.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="113.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="99.0" text="Address" />
+            <TableColumn fx:id="colDob" prefWidth="111.0" text="DOB" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="130.0" text="Phone Number" />
+            <TableColumn fx:id="colGender" prefWidth="66.0" text="Gender" />
+            <TableColumn fx:id="colEmail" prefWidth="144.0" text="Email" />
+            <TableColumn fx:id="colPassword" prefWidth="130.0" text="Password" />
+            <TableColumn fx:id="colNewsLetter" prefWidth="75.0" text="News Letter" />
+         </columns>
+      </TableView>
+      <Label layoutX="934.0" layoutY="89.0" text="Order ID" textFill="WHITE" />
+      <TextField fx:id="txtId" layoutX="1039.0" layoutY="85.0" prefHeight="25.0" prefWidth="259.0" />
+      <Label layoutX="934.0" layoutY="127.0" text="Name" textFill="WHITE" />
+      <TextField fx:id="txtName" layoutX="1038.0" layoutY="123.0" prefHeight="25.0" prefWidth="259.0" />
+      <Label layoutX="934.0" layoutY="164.0" text="Address" textFill="WHITE" />
+      <Label layoutX="934.0" layoutY="202.0" text="DOB" textFill="WHITE" />
+      <Label layoutX="934.0" layoutY="239.0" text="Phone Number" textFill="WHITE" />
+      <TextField fx:id="txtAddress" layoutX="1040.0" layoutY="160.0" prefHeight="25.0" prefWidth="259.0" />
+      <Label layoutX="934.0" layoutY="275.0" text="Gender" textFill="WHITE" />
+      <TextField fx:id="txtPhoneNumber" layoutX="1039.0" layoutY="235.0" prefHeight="25.0" prefWidth="259.0" />
+      <Label layoutX="934.0" layoutY="311.0" text="Email" textFill="WHITE" />
+      <Label layoutX="935.0" layoutY="347.0" text="Password" textFill="WHITE" />
+      <TextField fx:id="txtEmail" layoutX="1041.0" layoutY="307.0" prefHeight="25.0" prefWidth="259.0" />
+      <DatePicker fx:id="dob" layoutX="1039.0" layoutY="198.0" prefHeight="25.0" prefWidth="259.0" />
+      <JFXComboBox fx:id="cmbGender" layoutX="1038.0" layoutY="271.0" prefHeight="25.0" prefWidth="259.0" />
+      <TextField fx:id="txtPassword" layoutX="1039.0" layoutY="343.0" prefHeight="25.0" prefWidth="259.0" />
+      <Label layoutX="935.0" layoutY="384.0" text="News Letter" textFill="WHITE" />
+      <JFXComboBox fx:id="cmbNewsLetter" layoutX="1040.0" layoutY="380.0" prefHeight="25.0" prefWidth="259.0" />
+   </children>
+</AnchorPane>

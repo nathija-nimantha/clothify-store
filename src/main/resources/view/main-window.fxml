@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/22"
+            fx:controller="org.clothifyStore.controller.MainWindowController">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="437.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND"
+               strokeType="INSIDE" width="438.0">
+        <fill>
+            <LinearGradient endX="0.5308056872037914" endY="0.9052132701421801" startX="0.5023696682464455">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.4156862795352936" green="0.10588235408067703" blue="0.6039215922355652"/>
+                        </color>
+                    </Stop>
+                    <Stop offset="0.006711409395973154">
+                        <color>
+                            <Color red="0.4156862795352936" green="0.10588235408067703" blue="0.6039215922355652"/>
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.6117647290229797" green="0.15294118225574493" blue="0.6901960968971252"/>
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </fill>
+    </Rectangle>
+    <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="144.0" layoutY="33.0" preserveRatio="true">
+        <Image url="@../image/clothify-logo.png"/>
+    </ImageView>
+
+    <Label layoutX="72.0" layoutY="196.0" style="-fx-font-size: 24px; -fx-font-weight: bold;"
+           text="Welcome to Clothify Store!"/>
+
+    <GridPane hgap="10" layoutX="150.0" layoutY="220.0" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints/>
+        </rowConstraints>
+    </GridPane>
+
+    <Label layoutX="88.0" layoutY="392.0" style="-fx-font-size: 14px;"
+           text="Please login or register to access the store."/>
+    <JFXButton fx:id="btnLogin" alignment="CENTER" layoutX="105.0" layoutY="324.0" onAction="#btnLoginOnAction"
+               text="Login" textAlignment="CENTER">
+        <stylesheets>
+            <URL value="@../css/buttonStyle.css"/>
+        </stylesheets>
+    </JFXButton>
+    <JFXButton fx:id="btnSignup" alignment="CENTER" layoutX="243.0" layoutY="324.0" onAction="#btnSignupOnAction"
+               text="Register" textAlignment="CENTER">
+        <stylesheets>
+            <URL value="@../css/buttonStyle.css"/>
+        </stylesheets>
+    </JFXButton>
+    <Label alignment="CENTER" layoutX="44.0" layoutY="240.0" prefHeight="20.0" prefWidth="361.0"
+           text="where style meets comfort. Discover trendy, high-quality">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <Label layoutX="138.0" layoutY="260.0" text="clothing for every occasion.">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <Label layoutX="69.0" layoutY="285.0" text="Dress to impress with fashion that speaks to you!">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+</AnchorPane>
